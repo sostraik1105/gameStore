@@ -8,7 +8,7 @@ const { rels } = require('./models/relations');
 
 rels();
 
-db.sync({ force: true })
+db.sync()
     .then(() => console.log('db_sync'))
     .catch(err => console.log(err));
 

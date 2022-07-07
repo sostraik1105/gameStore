@@ -14,11 +14,11 @@ const rels = () => {
 
     // Games N:M Consoles
     Games.belongsToMany(Consoles, {
-        foreignKey: 'consoleId',
+        foreignKey: 'gameId',
         through: 'gameInConsole',
     });
     Consoles.belongsToMany(Games, {
-        foreignKey: 'gameId',
+        foreignKey: 'consoleId',
         through: 'gameInConsole',
     });
 };
